@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>轻音 Pro 无线降噪耳机 · 商品详情（ImageGrab 本地演示页）</title>
+<style>
+  :root { --red: #ff5000; --red-dark: #e64600; --ink: #1a1a1a; --muted: #8a8f99; --line: #ececec; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #f4f5f7; color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif; font-size: 14px; }
+  a { color: inherit; text-decoration: none; }
+
+  header.top { background: #fff; border-bottom: 1px solid var(--line); }
+  .topbar { max-width: 1200px; margin: 0 auto; padding: 0 24px; height: 64px; display: flex; align-items: center; gap: 24px; }
+  .logo { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 17px; color: var(--red); }
+  .logo img { width: 30px; height: 30px; border-radius: 8px; }
+  .search { flex: 1; max-width: 460px; display: flex; border: 2px solid var(--red); border-radius: 999px; overflow: hidden; }
+  .search input { flex: 1; border: 0; padding: 8px 16px; outline: none; font-size: 13px; }
+  .search button { border: 0; background: var(--red); color: #fff; padding: 0 22px; font-size: 13px; cursor: pointer; }
+  .topnav { margin-left: auto; display: flex; gap: 20px; color: var(--muted); font-size: 13px; }
+
+  .crumb { max-width: 1200px; margin: 0 auto; padding: 14px 24px; color: var(--muted); font-size: 12.5px; }
+
+  .product { max-width: 1200px; margin: 0 auto; background: #fff; border-radius: 14px; padding: 26px; display: grid; grid-template-columns: 460px 1fr; gap: 36px; box-shadow: 0 8px 24px -18px rgba(17,24,39,.35); }
+
+  .gallery__main { width: 100%; aspect-ratio: 1/1; border-radius: 12px; overflow: hidden; background: #f7f8fa; border: 1px solid var(--line); }
+  .gallery__main img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .gallery__thumbs { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-top: 12px; }
+  .gallery__thumbs img { width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px; border: 2px solid transparent; cursor: pointer; background: #f7f8fa; }
+  .gallery__thumbs img.active { border-color: var(--red); }
+
+  .info__title { margin: 0 0 12px; font-size: 22px; line-height: 1.45; font-weight: 600; }
+  .info__tags { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+  .tag { padding: 2px 8px; border-radius: 4px; background: #fff4ec; color: var(--red); font-size: 12px; }
+  .price-box { background: linear-gradient(90deg, #fff5ef, #fffaf7); border-radius: 12px; padding: 16px 18px; margin-bottom: 20px; }
+  .price-box .label { color: var(--muted); font-size: 12.5px; margin-right: 10px; }
+  .price { color: var(--red); font-size: 30px; font-weight: 700; }
+  .price small { font-size: 15px; font-weight: 600; margin-right: 2px; }
+  .price-box .origin { margin-left: 12px; color: var(--muted); text-decoration: line-through; font-size: 13px; }
+  .meta-row { display: flex; gap: 40px; margin-top: 14px; color: var(--muted); font-size: 12.5px; }
+  .meta-row b { color: var(--ink); }
+
+  .row { display: flex; gap: 14px; padding: 14px 0; border-top: 1px dashed var(--line); font-size: 13px; }
+  .row__label { width: 62px; color: var(--muted); flex-shrink: 0; padding-top: 6px; }
+  .opt { padding: 6px 14px; border: 1px solid var(--line); border-radius: 8px; cursor: pointer; margin-right: 8px; }
+  .opt.active { border-color: var(--red); color: var(--red); background: #fff7f2; }
+
+  .buy { display: flex; gap: 14px; margin-top: 22px; }
+  .btn { height: 48px; padding: 0 42px; border: 0; border-radius: 999px; font-size: 15px; font-weight: 600; cursor: pointer; }
+  .btn--primary { background: var(--red); color: #fff; }
+  .btn--ghost { background: #fff; color: var(--red); border: 1px solid var(--red); }
+
+  .detail { max-width: 1200px; margin: 22px auto 60px; background: #fff; border-radius: 14px; padding: 26px; }
+  .detail h2 { margin: 0 0 6px; font-size: 17px; }
+  .detail p { color: var(--muted); font-size: 13px; margin: 0 0 20px; }
+  .detail__banner { height: 220px; border-radius: 12px; background-size: cover; background-position: center; margin-bottom: 18px; }
+  .detail__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .detail__grid img { width: 100%; border-radius: 12px; display: block; background: #f7f8fa; }
+
+  footer { text-align: center; color: var(--muted); font-size: 12px; padding: 24px; }
+  @media (max-width: 900px) { .product { grid-template-columns: 1fr; } .detail__grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+  <header class="top">
+    <div class="topbar">
+      <div class="logo">
+        <!-- 小尺寸 logo：应被插件过滤掉 -->
+        <img src="./images/icon-logo.png" alt="logo" />
+        淘小铺
+      </div>
+      <div class="search">
+        <input value="轻音 Pro 无线降噪耳机" aria-label="搜索" />
+        <button type="button">搜索</button>
+      </div>
+      <nav class="topnav"><span>我的淘宝</span><span>购物车</span><span>收藏夹</span></nav>
+    </div>
+  </header>
+
+  <div class="crumb">首页 &gt; 数码家电 &gt; 耳机 &gt; 轻音 Pro 无线降噪耳机</div>
+
+  <main class="product">
+    <section class="gallery">
+      <!-- 主图：懒加载属性 data-src，用于验证插件对懒加载的兼容 -->
+      <div class="gallery__main">
+        <img id="mainImage" src="./images/pixel-1x1.png" data-src="./images/product-01.png" alt="主图" />
+      </div>
+      <div class="gallery__thumbs">
+        <img class="active" src="./images/product-01.png" alt="缩略图1" />
+        <img src="./images/pixel-1x1.png" data-src="./images/product-02.png" alt="缩略图2" />
+        <img src="./images/pixel-1x1.png" data-src="./images/product-03.png" alt="缩略图3" />
+        <img src="./images/pixel-1x1.png" data-src="./images/product-04.png" alt="缩略图4" />
+        <img src="./images/product-09.jpg" alt="缩略图5" />
+      </div>
+    </section>
+
+    <section class="info">
+      <h1 class="info__title">轻音 Pro 无线降噪耳机 主动降噪 长续航 蓝牙5.3 通话降噪</h1>
+      <div class="info__tags">
+        <span class="tag">官方正品</span>
+        <span class="tag">7天无理由</span>
+        <span class="tag">顺丰包邮</span>
+      </div>
+
+      <div class="price-box">
+        <span class="label">活动价</span>
+        <span class="price"><small>¥</small>899.00</span>
+        <span class="origin">¥1299.00</span>
+        <div class="meta-row">
+          <span>月销 <b>2.1万+</b></span>
+          <span>累计评价 <b>8.6万</b></span>
+          <span>发货地 <b>浙江 杭州</b></span>
+        </div>
+      </div>
+
+      <div class="row">
+        <span class="row__label">颜色</span>
+        <div><span class="opt active">曜石黑</span><span class="opt">云雾白</span><span class="opt">雾霾蓝</span></div>
+      </div>
+      <div class="row">
+        <span class="row__label">套餐</span>
+        <div><span class="opt active">标准版</span><span class="opt">充电仓套装</span></div>
+      </div>
+      <div class="row">
+        <span class="row__label">服务</span>
+        <div>48 小时发货 · 破损包赔 · 一年质保</div>
+      </div>
+
+      <div class="buy">
+        <button class="btn btn--ghost" type="button">加入购物车</button>
+        <button class="btn btn--primary" type="button">立即购买</button>
+      </div>
+    </section>
+  </main>
+
+  <section class="detail">
+    <h2>商品详情</h2>
+    <p>本页为 ImageGrab 插件的本地演示页，图片全部来自本地文件，用于测试提取、过滤与 PNG 转换流程。</p>
+    <!-- 背景图：用于验证插件对 background-image 的提取 -->
+    <div class="detail__banner" style="background-image: url('./images/product-05.png')"></div>
+    <div class="detail__grid">
+      <img src="./images/product-06.png" alt="详情图1" loading="lazy" />
+      <img src="./images/product-07.png" alt="详情图2" loading="lazy" />
+      <img src="./images/product-08.png" alt="详情图3" loading="lazy" />
+      <!-- 非 PNG 格式：用于验证插件统一转 PNG -->
+      <img src="./images/product-10.webp" alt="详情图4（webp）" loading="lazy" />
+    </div>
+  </section>
+
+  <footer>© 2026 淘小铺 · 本页面仅用于 ImageGrab 扩展的功能演示</footer>
+
+  <script>
+    // 模拟电商详情页的懒加载：滚动到可视区域后再把 data-src 写入 src
+    const lazyImages = Array.from(document.querySelectorAll('img[data-src]'));
+    const main = document.getElementById('mainImage');
+    if (main) main.src = main.dataset.src;
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const img = entry.target;
+        img.src = img.dataset.src;
+        io.unobserve(img);
+      });
+    }, { rootMargin: '200px' });
+    lazyImages.forEach((img) => io.observe(img));
+
+    // 缩略图切换主图
+    document.querySelectorAll('.gallery__thumbs img').forEach((thumb) => {
+      thumb.addEventListener('click', () => {
+        document.querySelectorAll('.gallery__thumbs img').forEach((t) => t.classList.remove('active'));
+        thumb.classList.add('active');
+        const target = thumb.dataset.src || thumb.src;
+        main.src = target;
+      });
+    });
+  </script>
+</body>
+</html>
