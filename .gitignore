@@ -5,3 +5,8 @@ Thumbs.db
 *.log
 .vscode/
 .idea/
+
+# 交付物（本地存档，不入库；仓库内已有对应截图）
+deliverables/
+# 整页长图体积大，只保留首屏截图入库
+screenshots/*-full.png
